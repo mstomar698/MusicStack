@@ -1,4 +1,4 @@
-import { useSelctor } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { Error, Loader, SongCard } from '../components';
@@ -6,7 +6,7 @@ import { useGetSongsBySearchQuery } from '../redux/services/shazamCore';
 
 const Search = () => {
   const { searchTerm } = useParams();
-  const { activeSong, isPlaying } = useSelctor((state) => state.player);
+  const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetSongsBySearchQuery(searchTerm);
 
   const songs = data?.track?.hits.map((song) => song.track);
