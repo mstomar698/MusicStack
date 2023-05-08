@@ -12,3 +12,4 @@ cd MusicStack
 npm install
 npm run dev
 ```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7855c504-c342-4675-b64c-4a1612c49d04/deploy-status)](https://app.netlify.com/sites/musicstack/deploys)
