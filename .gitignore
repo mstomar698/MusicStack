@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-UseLeassCode.js
+UseLessCode.js
 node_modules
 .env
 dist

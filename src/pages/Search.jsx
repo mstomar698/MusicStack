@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -6,7 +7,7 @@ import { useGetSongsBySearchQuery } from '../redux/services/shazamCore';
 
 const Search = () => {
   const { searchTerm } = useParams();
-  const { activeSong, isPlaying } = useSelector((state) => state.player);
+  // const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetSongsBySearchQuery(searchTerm);
 
   const songs = data?.track?.hits.map((song) => song.track);
@@ -18,18 +19,23 @@ const Search = () => {
       <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Showing result for <span className="font-black">{searchTerm}</span>
       </h2>
-
-      <div className="flex flex-wrap sm:justify-start justify-center gap-8">
-        {songs.map((song, i) => (
-          <SongCard
-            key={song.key}
-            isPlaying={isPlaying}
-            activeSong={activeSong}
-            data={data}
-            i={i}
-          />
-        ))}
+      <div className="p-8 max-sm:p-0 font-bold text-2xl max-sm:text-sm text-white/60 text-center mt-32 mb-10">
+        We are facing heavy requests today{' '}
+        <div className="font-black text-white mt-4">try at later time 😥</div>
       </div>
+      {/**
+<div className="flex flex-wrap sm:justify-start justify-center gap-8">
+{songs.map((song, i) => (
+  <SongCard
+  key={song.key}
+  isPlaying={isPlaying}
+  activeSong={activeSong}
+  data={data}
+  i={i}
+  />
+  ))}
+  </div>
+*/}
     </div>
   );
 };
