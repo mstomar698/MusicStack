@@ -1,4 +1,4 @@
-## Personal-Music-App
+## MusicStack
 
 - A Simple app that works on paid APi to provide music data to the user.
 - The is made using React, Redux And Tailwind CSS.
@@ -7,10 +7,8 @@
 ### To run locally
 
 ```bash
-git clone https://github.com/mstomar698/live-music-app.git
-cd live-music-app
-yarn install
-yarn dev
+git clone https://github.com/mstomar698/MusicStack.git
+cd MusicStack
+npm install
+npm run dev
 ```
-
-###### This project was made in reference jsmatery.pro
